@@ -47,6 +47,7 @@ for quality = 29:1:51
     end
     bpg(quality-28).bpp = bpp_count/length(imgs);
     bpg(quality-28).ssim = ssim_count/length(imgs);
+    %bpg(quality-28).ssim = -10*log10(1 - ssim_count/length(imgs));
     bpg(quality-28).psnr = psnr_count/length(imgs);
 end
 
@@ -85,6 +86,7 @@ for quality = 1:1:80
     end
     webp(quality).bpp = bpp_count/length(imgs);
     webp(quality).ssim = ssim_count/length(imgs);
+    %webp(quality).ssim = -10*log10(1 - ssim_count/length(imgs));
     webp(quality).psnr = psnr_count/length(imgs);
 end
 
@@ -123,6 +125,7 @@ for quality = 20:1:40
     end
     jpg2k(quality-19).bpp = bpp_count/length(imgs);
     jpg2k(quality-19).ssim = ssim_count/length(imgs);
+    %jpeg2k(quality).ssim = -10*log10(1 - ssim_count/length(imgs));
     jpg2k(quality-19).psnr = psnr_count/length(imgs);
 end
 
@@ -156,6 +159,7 @@ for quality = 1:1:30
     end
     jpeg(quality).bpp = bpp_count/length(imgs);
     jpeg(quality).ssim = ssim_count/length(imgs);
+    %jpeg(quality).ssim = -10*log10(1 - ssim_count/length(imgs));
     jpeg(quality).psnr = psnr_count/length(imgs);
 end
 
